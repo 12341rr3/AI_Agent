@@ -63,19 +63,18 @@
       padding-bottom: 120px; /* Prevent overlap from input */
     }
 
-    #askForm {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-      max-width: 600px;
-      margin: 0 auto;
-      background-color: #121212;
-      padding: 10px;
-      border-top: 1px solid #333;
-      z-index: 10;
-    }
+   #askForm {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #121212;
+  padding: 10px 12px;
+  border-top: 1px solid #333;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
 
     textarea.form-control {
       resize: none;
@@ -104,6 +103,11 @@
       z-index: 0;
       pointer-events: none;
     }
+    .container.chat-container {
+  max-width: 100%;
+  padding: 0 12px;
+}
+
   </style>
 </head>
 <body>
@@ -116,11 +120,12 @@
     </div>
 
     <form id="askForm" enctype="multipart/form-data">
-      <div class="d-flex align-items-center mb-2">
-        <textarea id="question" name="question" class="form-control me-2" rows="1"
-          placeholder="Type your question..." style="flex: 1;" spellcheck="true" autocorrect="on" autocomplete="on"></textarea>
-        <button type="submit" class="btn btn-primary ms-auto">📤</button>
-      </div>
+     <div class="d-flex flex-row gap-2 mb-2 w-100">
+  <textarea id="question" name="question" class="form-control flex-grow-1" rows="1"
+    placeholder="Type your question..." spellcheck="true" autocorrect="on" autocomplete="on"></textarea>
+  <button type="submit" class="btn btn-primary">📤</button>
+</div>
+
 
       <label for="attachment" class="me-2 text-white" title="Attach PDF">
         <i class="bi bi-paperclip file-upload-icon"></i>
