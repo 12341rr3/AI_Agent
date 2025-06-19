@@ -50,42 +50,35 @@ box-sizing: border-box;
 }
 
 
-    .chat-bubble {
+ .chat-bubble {
   position: relative;
-  max-width: 80%;
-  padding: 10px 14px;
-  margin-bottom: 8px;
+  max-width: 75%;
+  padding: 8px 12px 20px 12px; /* room for timestamp */
+  margin-bottom: 6px;
   font-size: 0.95rem;
-  border-radius: 18px;
+  border-radius: 7.5px;
   line-height: 1.4;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   word-wrap: break-word;
+  display: inline-block;
+  box-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.13);
 }
 
 .user-bubble {
+  background-color: #005c4b;
+  color: white;
   align-self: flex-end;
-  background-color: #dcf8c6;
-  color: #000;
-  border-radius: 18px;
-  border-bottom-right-radius: 2px;
-  position: relative;
-  padding: 10px 14px;
-  margin-bottom: 8px;
   margin-left: auto;
-  max-width: 90%; /* Optional limit for smaller devices */
-  word-wrap: break-word;
+  border-bottom-right-radius: 2px;
 }
 
-.user-bubble::after {
-  content: "";
+
+.chat-bubble .timestamp {
   position: absolute;
-  right: -6px;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  border-left: 6px solid #dcf8c6;
-  border-top: 6px solid transparent;
-  border-bottom: 6px solid transparent;
+  bottom: 4px;
+  right: 10px;
+  font-size: 0.75rem;
+  opacity: 0.6;
+  color: white;
 }
 
 .ai-bubble {
