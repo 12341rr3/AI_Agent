@@ -81,7 +81,9 @@
   height: 100vh;
   max-width: 600px;
   margin: 0 auto;
+  overflow: hidden;
 }
+
 
 
 
@@ -165,11 +167,17 @@
         font-size: 0.9rem;
       }
     }
+    #chatHeader {
+  background-color: #121212;
+  z-index: 20;
+}
+
   </style>
 </head>
 <body>
   <div class="chat-container">
-    <h3>🛠️ Ask Me Anything 🤔💭</h3>
+   <h3 class="text-center mb-2 sticky-top py-2" id="chatHeader">🛠️ Ask Me Anything 🤔💭</h3>
+
     <div id="chatBox" class="chat-box">
       <!-- Chat messages appear here -->
     </div>
